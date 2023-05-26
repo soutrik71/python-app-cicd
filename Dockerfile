@@ -9,13 +9,7 @@ COPY . /app
 
 # pip install flask
 RUN pip install --upgrade pip && \
-    pip install \
-        Flask \
-        awscli \
-        flake8 \
-        pylint \
-        pytest \
-        pytest-flask
+    pip install -r requirements.txt
 
 # expose the default flask port
 EXPOSE 8080
@@ -23,4 +17,4 @@ EXPOSE 8080
 # execute the Flask app
 ENTRYPOINT ["python"]
 HEALTHCHECK CMD curl --fail http://localhost:8080/ || exit 1
-CMD ["/app/app.py"]
+CMD ["/app/app_code.py"]

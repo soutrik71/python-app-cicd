@@ -1,6 +1,6 @@
 '''A module for testing'''
 import unittest
-from app import APP
+from app_code import APP
 
 
 class CyclonesTests(unittest.TestCase):
