@@ -41,7 +41,7 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASS
 
       - name: docker-image-build
-        run: docker build --file Dockerfile --tag soutrik71/pywebapp:v0.1
+        run: docker build --file Dockerfile --tag soutrik71/pywebapp:v0.1 .
 
       - name: docker image push
         run: docker push soutrik71/pywebapp:v0.1
