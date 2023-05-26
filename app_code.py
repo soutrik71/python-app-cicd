@@ -2,9 +2,10 @@
 """
 mascot: a microservice for serving mascot data
 """
+import os
 import json
 from flask import Flask, jsonify, abort, make_response
-import os
+
 
 try:
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
