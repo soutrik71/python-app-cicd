@@ -45,3 +45,11 @@ jobs:
 
       - name: docker image push
         run: docker push soutrik71/pywebapp:v0.1
+
+
+  test_image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run unit tests in container
+        run: docker run soutrik71/pywebapp:v0.1 -m unittest --verbose --failfast
