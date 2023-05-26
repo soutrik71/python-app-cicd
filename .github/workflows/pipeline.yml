@@ -1,8 +1,12 @@
 name: Pipeline
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 env:
-  APPLICATION_NAME: app2
+  APPLICATION_NAME: app_code
+
 jobs:
   lint:
     name: linting
