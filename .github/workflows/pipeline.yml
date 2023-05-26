@@ -21,7 +21,7 @@ jobs:
     # code  liniting
     - name: Lint code
       run: |
-        flake8 --ignore=E501,E231 *.py
+        flake8 --ignore=E501,E231,W293 *.py
         pylint --disable=C0301 --disable=C0326 *.py
     # run unit test
     - name: Run unit tests

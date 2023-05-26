@@ -8,10 +8,8 @@ import os
 
 try:
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-except:
+except Exception as e:
     os.chdir(os.path.dirname(os.path.abspath("__file__")))
-    
 finally:
     print(os.getcwd())
 
